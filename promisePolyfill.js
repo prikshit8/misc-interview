@@ -18,6 +18,7 @@ function Promise(executer) {
         value = val;
         if (typeof onReject === 'function') {
             onReject(val);
+            isCalled=true;
         }
     }
     this.then = function (callback) {
